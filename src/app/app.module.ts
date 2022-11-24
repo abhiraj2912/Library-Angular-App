@@ -5,12 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LibraryLoginComponent } from './library-login/library-login.component';
 import { BookEntryComponent } from './book-entry/book-entry.component';
+import { ViewBooksComponent } from './view-books/view-books.component';
+import { SearchBookComponent } from './search-book/search-book.component';
+import { DeleteBookComponent } from './delete-book/delete-book.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LibraryLoginComponent,
-    BookEntryComponent
+    BookEntryComponent,
+    ViewBooksComponent,
+    SearchBookComponent,
+    DeleteBookComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
