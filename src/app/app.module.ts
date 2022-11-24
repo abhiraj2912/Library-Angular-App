@@ -9,6 +9,7 @@ import { ViewBooksComponent } from './view-books/view-books.component';
 import { SearchBookComponent } from './search-book/search-book.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
+import { BookIssueComponent } from './book-issue/book-issue.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     ViewBooksComponent,
     SearchBookComponent,
     DeleteBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    BookIssueComponent
   ],
   imports: [
     BrowserModule,
