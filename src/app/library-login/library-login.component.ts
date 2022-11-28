@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./library-login.component.css']
 })
 export class LibraryLoginComponent {
+  username=""
+  password=""
+
+  readValues=()=>{
+    let data = {"username":this.username,"password":this.password}
+    console.log(data)
+  }
 
 }

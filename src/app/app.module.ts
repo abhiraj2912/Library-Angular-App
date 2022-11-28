@@ -14,6 +14,7 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 const myrouter:Routes=[
@@ -69,7 +70,8 @@ const myrouter:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myrouter)
+    RouterModule.forRoot(myrouter),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class BookIssueComponent {
 
+  name=""
+  bookname=""
+  issuedate=""
+  memberID=""
+
+  readValues=()=>{
+    let data={"name":this.name,"bookname":this.bookname,"issuedate":this.issuedate,"memberID":this.memberID }
+    console.log(data)
+  }
+
 }
