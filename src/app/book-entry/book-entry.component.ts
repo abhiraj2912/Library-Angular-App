@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-book-entry',
@@ -6,18 +7,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./book-entry.component.css']
 })
 export class BookEntryComponent {
-  bookname=""
+  
+  constructor(private api:ApiService){}
+
+  bookName=""
   image=""
   author=""
   language=""
   distributor=""
-  year=""
+  releasedYear=""
   description=""
 
   readValues=()=>{
 
-    let data= {"name":this.bookname,"image":this.image,"author":this.author,"language":this.language,"distributor":this.distributor,"year":this.year,"description":this.description}
+    let data= {"name":this.bookName,"image":this.image,"author":this.author,"language":this.language,"distributor":this.distributor,"year":this.releasedYear,"description":this.description}
     console.log(data)
+    this.api.addBooks(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if (response.status=="success") {
+          alert("Product Added Successfully")
+          this.bookName=""
+          this.image=""
+          this.author=""
+          this.language=""
+          this.distributor=""
+          this.releasedYear=""
+          this.description=""
+        } else {
+          alert("Something went wrong")
+        }
+      }
+    )
+
   }
 
 }
