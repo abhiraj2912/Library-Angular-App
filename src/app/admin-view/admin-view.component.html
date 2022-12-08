@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-5">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Language</th>
+                            <th scope="col">Distributor</th>
+                            <th scope="col">Released Year</th>
+                            <th scope="col">Image</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let i of bookData">
+                            <td>{{i.bookName}}</td>
+                            <td>{{i.author}}</td>
+                            <td>{{i.description}}</td>
+                            <td>{{i.language}}</td>
+                            <td>{{i.distributor}}</td>
+                            <td>{{i.releasedYear}}</td>
+                            <td><img height="50px" src="{{i.image}}" alt=""></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

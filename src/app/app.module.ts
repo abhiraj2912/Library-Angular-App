@@ -15,7 +15,9 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AdminViewComponent } from './admin-view/admin-view.component';
+import { AdminSearchComponent } from './admin-search/admin-search.component'
 
 
 const myrouter:Routes=[
@@ -50,6 +52,14 @@ const myrouter:Routes=[
   {
     path:"userlogin",
     component:UserLoginComponent
+  },
+  {
+    path:"adminview",
+    component:AdminViewComponent
+  },
+  {
+    path:"adminsearch",
+    component:AdminSearchComponent
   }
 ]
 
@@ -66,7 +76,9 @@ const myrouter:Routes=[
     BookIssueComponent,
     UserRegisterComponent,
     UserLoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminViewComponent,
+    AdminSearchComponent
   ],
   imports: [
     BrowserModule,
