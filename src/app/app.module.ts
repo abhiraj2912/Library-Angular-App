@@ -17,7 +17,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminViewComponent } from './admin-view/admin-view.component';
-import { AdminSearchComponent } from './admin-search/admin-search.component'
+import { AdminSearchComponent } from './admin-search/admin-search.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component'
 
 
 const myrouter:Routes=[
@@ -78,7 +79,8 @@ const myrouter:Routes=[
     UserLoginComponent,
     NavbarComponent,
     AdminViewComponent,
-    AdminSearchComponent
+    AdminSearchComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,
