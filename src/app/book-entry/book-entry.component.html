@@ -5,7 +5,7 @@
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Book Tile</label>
-                    <input name="bookname" [(ngModel)]="bookname" type="text" class="form-control">
+                    <input name="bookName" [(ngModel)]="bookName" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Author</label>
@@ -25,11 +25,11 @@
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Released Year</label>
-                    <input name="year" [(ngModel)]="year" type="text" class="form-control">
+                    <input name="releasedYear" [(ngModel)]="releasedYear" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Book Image</label>
-                    <input type="file" name="image" [(ngModel)]="image" id="" class="form-control">
+                    <input type="text" name="image" [(ngModel)]="image" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <button (click)="readValues()" class="btn btn-success">Add Book</button>

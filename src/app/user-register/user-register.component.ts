@@ -25,7 +25,7 @@ export class UserRegisterComponent {
     if (this.password==this.cpassword) {
       let data={"name":this.name,"aadharno":this.aadharno,"address":this.address,"pincode":this.pincode,"dob":this.dob,"email":this.email,"phone":this.phone,"username":this.username,"password":this.password}
       console.log(data)
-      this.api.addBooks(data).subscribe(
+      this.api.addUser(data).subscribe(
         (response:any)=>{
           console.log(response)
           if (response.status=="success") {

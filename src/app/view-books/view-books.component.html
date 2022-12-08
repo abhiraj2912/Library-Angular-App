@@ -1,20 +1,28 @@
-<app-navbar></app-navbar>
-
+<app-user-navbar></app-user-navbar>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-3">
+                <div class="div col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form label">Book Title</label>
+                    <input name="bookName" [(ngModel)]="bookName" type="text" class="form-control">
+                </div>
+                <div class="div col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn-btn-success">Search</button>
+                </div>
+            </div>
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data">
                     <div class="card">
                         <img height="400px" src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">{{i.name}}</h5>
+                          <h5 class="card-title">{{i.bookName}}</h5>
                           <p class="card-text">Author: {{i.author}}</p>
                           <p class="card-text">Language: {{i.language}}</p>
                           <p class="card-text">Distributor: {{i.distributor}}</p>
-                          <p class="card-text">Released Year: {{i.year}}</p>
+                          <p class="card-text">Released Year: {{i.releasedYear}}</p>
                           <p class="card-text">Description: {{i.description}}</p>
-                          <a href="#" class="btn btn-primary">View Details</a>
+                          <a routerLink="#" class="btn btn-primary">View Details</a>
                         </div>
                       </div>
                 </div>

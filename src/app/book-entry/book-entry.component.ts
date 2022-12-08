@@ -20,13 +20,13 @@ export class BookEntryComponent {
 
   readValues=()=>{
 
-    let data= {"name":this.bookName,"image":this.image,"author":this.author,"language":this.language,"distributor":this.distributor,"year":this.releasedYear,"description":this.description}
+    let data= {"bookName":this.bookName,"image":this.image,"author":this.author,"language":this.language,"distributor":this.distributor,"releasedYear":this.releasedYear,"description":this.description}
     console.log(data)
     this.api.addBooks(data).subscribe(
       (response:any)=>{
         console.log(response)
         if (response.status=="success") {
-          alert("Product Added Successfully")
+          alert("Book Added Successfully")
           this.bookName=""
           this.image=""
           this.author=""
